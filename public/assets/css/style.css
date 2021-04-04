@@ -1,0 +1,76 @@
+.navbar-bluedark{
+    background-color: #243C60;
+}
+.sidebar-dark-primary{
+    background-color: #1F283E !important;
+}
+.bg-awal{
+    background-color: #243C60 !important;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white !important;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: grey !important;
+}
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
+    background-color: white !important;
+    color: #1A2035!important;
+}
+.btn-add{
+    background-color: #58DB91;
+    border-radius: 5px;
+    float: right;
+}
+.text-add a{
+    color: #1F283E;
+}
+.breadcrumb-item a{
+    color: #727275 !important;
+}
+.breadcrumb-item a:hover{
+    color: #0056b3 !important;
+}
+.form-control-alternative{
+    transition: box-shadow .15s ease !important;
+    border: 0.5px solid #dee2e6;
+    box-shadow: 0 1px 3px rgb(50 50 93 / 15%),
+                0 1px 0 rgb(0 0 0 / 2%);
+}
+.form-control-alternative:focus{
+    border: 1px solid #243C60 !important;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%),
+                0 1px 3px rgb(0 0 0 / 8%);
+}
+.cd-title{
+    font-weight: 400 !important; 
+    font-family: 'Roboto';
+    color: #1F283E !important; 
+    font-size:20px !important;
+}
+.txt-label{
+    font-family: 'Roboto';
+    font-weight: 600 !important;
+    color: #1F283E;
+}
+.btn-data{
+    color: #1F283E;
+    font-weight: 600;
+    background-color: #58DB91;
+    width: 35%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%),
+                0 1px 3px rgb(0 0 0 / 8%);
+}
+.card{
+    font-family: 'Roboto' !important;
+    color: #1F283E !important;
+    font-size: 14px !important;
+}
+/* .text-nowrap{
+    font-size: 14px !important;
+} */
+.text-rg{
+    float: right;
+    margin-right: 30px !important;
+}
