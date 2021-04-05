@@ -10,11 +10,12 @@ class Kecamatan extends Model
     use HasFactory;
     public $timestamps = false;
 
+    protected $table = 'kecamatans';
     protected $fillable = [
         'id_kecamatan','nama_kecamatan'
     ];
 
-    protected $primaryKey = 'id_kecamatan';
+    protected $primaryKey = 'id';
 
     public function datakriterias()
     {

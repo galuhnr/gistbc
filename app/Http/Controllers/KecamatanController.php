@@ -37,11 +37,27 @@ class KecamatanController extends Controller
      */
     public function store(Request $request)
     {
-        Kecamatan::create([
-            $id_kecamatan = $request->id_kecamatan,
-            $nama_kecamatan = $request->nama_kecamatan,
+      
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'id_kecamatan' => 'required',
+            'nama_kecamatan' => 'required'
         ]);
+
+        if ($validator->fails()) {
+            return response(['error' => $validator->errors(), 'Validation Error']);
+        }
+
+        $kecamatan = Kecamatan::create($data);
+
+       // return response(['kecamatan' => new KecamatanResource($kecamatan), 'message' => 'Created successfully'], 201);
+        // Kecamatan::create([
+        //     $id_kecamatan = $request->id_kecamatan,
+        //     $nama_kecamatan = $request->nama_kecamatan
+        // ]);
         return redirect('datakecamatan');
+        // dd($request->all());
     }
 
     /**

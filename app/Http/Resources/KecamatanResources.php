@@ -14,10 +14,6 @@ class KecamatanResource extends JsonResource
      */
     public function toArray($request)
     {
-        // return parent::toArray($request);
-        return [
-            'id_kecamatan'=>$this->id_kecamatan,
-            'nama_kecamatan'=>$this->nama_kecamatan
-        ];
+        return parent::toArray($request);
     }
 }

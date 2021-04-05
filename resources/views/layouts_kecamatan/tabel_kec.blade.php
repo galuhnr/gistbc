@@ -27,6 +27,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nama Kecamatan</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +35,7 @@
                         <tr>
                             <td>{{ $item->id_kecamatan }}</td>
                             <td>{{ $item->nama_kecamatan }}</td>
+                            <td class="text-center"><a href=""><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp<a href=""><i class="fas fa-trash" style="color: #C23D54;"></i></a></td>
                         </tr>
                         @endforeach
                     </tbody>
