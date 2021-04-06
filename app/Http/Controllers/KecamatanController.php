@@ -56,7 +56,7 @@ class KecamatanController extends Controller
         //     $id_kecamatan = $request->id_kecamatan,
         //     $nama_kecamatan = $request->nama_kecamatan
         // ]);
-        return redirect('datakecamatan');
+        return redirect('datakecamatan')->with('toast_success', 'Data berhasil disimpan!');
         // dd($request->all());
     }
 
@@ -79,7 +79,8 @@ class KecamatanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kec = Kecamatan::findorfail($id);
+        return view('layouts_kecamatan.edit_kec', compact('kec'));
     }
 
     /**
@@ -91,7 +92,9 @@ class KecamatanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $kec = Kecamatan::findorfail($id);
+        $kec->update($request->all());
+        return redirect('datakecamatan')->with('toast_success', 'Data berhasil diupdate');
     }
 
     /**
@@ -102,6 +105,8 @@ class KecamatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $kec = Kecamatan::findorfail($id);
+        $kec->delete();
+        return back()->with('info', 'Data berhasil dihapus');
     }
 }

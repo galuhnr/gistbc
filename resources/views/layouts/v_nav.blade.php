@@ -48,6 +48,12 @@
                     <li class="nav-item">
                         <a href="{{ route('datakecamatan') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
+                            <p>Data Tahun</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('datakecamatan') }}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
                             <p>Data Kecamatan</p>
                         </a>
                     </li>
