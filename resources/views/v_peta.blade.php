@@ -1,4 +1,5 @@
 @extends('layouts.v_template')
+@section('title', 'Pemetaan')
 
 @section('content')
     <!-- Map card -->

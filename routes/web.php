@@ -17,14 +17,14 @@ Route::get('/', function () {
     return view('v_peta');
 });
 
+// crud data kecamatan
 Route::get('/datakecamatan', 'App\Http\Controllers\KecamatanController@index')->name('datakecamatan');
 Route::get('/createkecamatan', 'App\Http\Controllers\KecamatanController@create')->name('createkecamatan');
 Route::post('/simpankecamatan', 'App\Http\Controllers\KecamatanController@store')->name('simpankecamatan');
 Route::get('/editkecamatan/{id}', 'App\Http\Controllers\KecamatanController@edit')->name('editkecamatan');
 Route::post('/updatekecamatan/{id}', 'App\Http\Controllers\KecamatanController@update')->name('updatekecamatan');
 Route::get('/deletekecamatan/{id}', 'App\Http\Controllers\KecamatanController@destroy')->name('deletekecamatan');
-// route::view('/data_kecamatan', 'layouts_kecamatan.tabel_kec');
-// route::view('/datakriteria', 'layouts_datakriteria.tabel_dk');
-// route::view('/data_rs', 'v_tabel_rs');
 
-// route::view('/add_kec', 'form_kec');
+// crud data tahun
+Route::resource('tahuns', 'App\Http\Controllers\TahunController');
+Route::get('/deletetahun/{id}', 'App\Http\Controllers\TahunController@destroy')->name('deletetahun');
