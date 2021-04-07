@@ -9,7 +9,7 @@
                 <div class="card-header">
                     <h3 class="card-title cd-title">Data Kecamatan</h3>
                 </div>
-                <form role="form" action="{{ route('updatekecamatan',$kec->id) }}" method="post" >
+                <form role="form" action="{{ route('updatekecamatan',$kec->id_kecamatan) }}" method="post" >
                     {{ csrf_field()}}
                     <div class="card-body mx-4">
                         <div class="form-group">

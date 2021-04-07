@@ -14,11 +14,11 @@
                     <div class="card-body mx-4">
                         <div class="form-group">
                             <label class="txt-label">Id tahun</label>
-                            <input type="text" class="form-control form-control-alternative" name="id_tahun" id="id_tahun" placeholder="Masukkan id">
+                            <input type="text" class="form-control" name="id_tahun" id="id_tahun" placeholder="Masukkan id">
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Tahun</label>
-                            <input type="text" class="form-control form-control-alternative" name="tahun" id="tahun" placeholder="Masukkan tahun">
+                            <input type="text" class="form-control" name="tahun" id="tahun" placeholder="Masukkan tahun">
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-center">

@@ -28,3 +28,7 @@ Route::get('/deletekecamatan/{id}', 'App\Http\Controllers\KecamatanController@de
 // crud data tahun
 Route::resource('tahuns', 'App\Http\Controllers\TahunController');
 Route::get('/deletetahun/{id}', 'App\Http\Controllers\TahunController@destroy')->name('deletetahun');
+
+// crud data kriteria
+Route::resource('datakriterias', 'App\Http\Controllers\DataKriteriaController');
+Route::get('/deletedata/{id}', 'App\Http\Controllers\DataKriteriaController@destroy')->name('deletedata');

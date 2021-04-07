@@ -17,6 +17,7 @@ class KecamatanController extends Controller
     {
         $datakec = Kecamatan::all();
         return view('layouts_kecamatan.tabel_kec', compact('datakec'));
+        
     }
 
     /**

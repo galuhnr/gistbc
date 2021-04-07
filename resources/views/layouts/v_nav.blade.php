@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/datakriteria" class="nav-link">
+                        <a href="{{ route('datakriterias.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Data Kriteria</p>
                         </a>
