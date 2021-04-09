@@ -13,8 +13,9 @@ class TbKecamatans extends Migration
      */
     public function up()
     {
-        Schema::create('kecamatans', function (Blueprint $table) {
-            $table->increments('id_kecamatan');
+        Schema::create('tb_kecamatan', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_kecamatan');
             $table->string('nama_kecamatan',50);
         });
     }

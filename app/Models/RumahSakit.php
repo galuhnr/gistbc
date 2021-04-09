@@ -4,29 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Tahun;
 use App\Models\Kecamatan;
 
-class DataKriteria extends Model
+class RumahSakit extends Model
 {
     use HasFactory;
+    
     public $timestamps = false;
-    protected $table = "data_kriterias";
-    protected $primaryKey = 'id_data';
+    protected $table = "rumah_sakit";
+    protected $primaryKey = 'id_rs';
     protected $fillable = [
-        'id_data',
-        'tahun_id',
+        'id_rs',
         'kecamatan_id',
-        'jml_faskes',
-        'jml_kasus',
-        'jml_rumahts',
-        'jml_kp',
+        'nama_rs',
+        'alamat',
+        'no_tlp',
+        
     ];
-     
-    public function tahuns() {
-
-        return $this->belongsTo(Tahun::class,'tahun_id');
-    }
 
     public function kecamatans() {
         

@@ -1,5 +1,5 @@
 @extends('layouts.v_template')
-@section('title-nav', 'Data Kriteria')
+@section('title', 'Data Kriteria')
 
 @section('content')
 <div class="row mb-3 mt-2">

@@ -12,10 +12,10 @@
                 <form role="form" action="{{ route('datakriterias.store')}}" method="post" >
                     {{ csrf_field()}}
                     <div class="card-body mx-4">
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label class="txt-label">Id data</label>
                             <input type="text" class="form-control" name="id_data" id="id_data" placeholder="Masukkan id data">
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label class="txt-label">Tahun</label>
                             <select class="form-control" name="tahun_id" id="tahun_id">

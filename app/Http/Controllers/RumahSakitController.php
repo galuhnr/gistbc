@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\DataKriteria;
-use App\Models\Tahun;
+use App\Models\RumahSakit;
 use App\Models\Kecamatan;
 use Illuminate\Support\Facades\Validator;
 
-class DataKriteriaController extends Controller
+class RumahSakitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,8 @@ class DataKriteriaController extends Controller
      */
     public function index()
     {
-        $data= DataKriteria::with('tahuns', 'kecamatans')->get();
-        // return response()->json( [$data] );
-        return view('datakriterias.index', compact('data'));
+        $data= RumahSakit::with('kecamatans')->get();
+        return view('rumahsakit.index', compact('data'));
     }
 
     /**
@@ -29,9 +27,8 @@ class DataKriteriaController extends Controller
      */
     public function create()
     {
-        $tahun = Tahun::all();
         $kec = Kecamatan::all();
-        return view('datakriterias.create', compact('tahun','kec'));
+        return view('rumahsakit.create', compact('kec'));
     }
 
     /**
@@ -42,21 +39,20 @@ class DataKriteriaController extends Controller
      */
     public function store(Request $request)
     {
-        $datas = $request->all();
-        $validator = Validator::make($datas, [
-            'id_data' => 'required',
-            'tahun_id' => 'required',
+        $data = $request->all();
+        $validator = Validator::make($data, [
+            'id_rs' => 'required',
             'kecamatan_id' => 'required',
-            'jml_faskes' => 'required',
-            'jml_kasus' => 'required',
-            'jml_rumahts' => 'required',
-            'jml_kp' => 'required',
+            'alamat' => 'required',
+            'nama_rs' => 'required',
+            'no_tlp' => 'required',
+            
         ]);
         if ($validator->fails()) {
             return response(['error' => $validator->errors(), 'Validation Error']);
         }
-        $dk = DataKriteria::create($datas);
-        return redirect('datakriterias')->with('toast_success', 'Data berhasil disimpan!');
+        $rs = RumahSakit::create($data);
+        return redirect('rumahsakit')->with('toast_success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -67,8 +63,7 @@ class DataKriteriaController extends Controller
      */
     public function show($id)
     {
-       
-
+        //
     }
 
     /**
@@ -79,10 +74,10 @@ class DataKriteriaController extends Controller
      */
     public function edit($id)
     {
-        $tahun = Tahun::all();
+        
         $kec = Kecamatan::all();
-        $data = DataKriteria::with('tahuns','kecamatans')->findorfail($id);
-        return view('datakriterias.edit', compact('data','tahun','kec'));
+        $data = RumahSakit::with('kecamatans')->findorfail($id);
+        return view('rumahsakit.edit', compact('data','kec'));
     }
 
     /**
@@ -94,9 +89,9 @@ class DataKriteriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = DataKriteria::findorfail($id);
+        $data = RumahSakit::findorfail($id);
         $data->update($request->all());
-        return redirect('datakriterias')->with('toast_success', 'Data berhasil diupdate');
+        return redirect('rumahsakit')->with('toast_success', 'Data berhasil diupdate');
     }
 
     /**
@@ -107,8 +102,8 @@ class DataKriteriaController extends Controller
      */
     public function destroy($id)
     {
-        $dt = DataKriteria::findorfail($id);
-        $dt->delete();
+        $data = RumahSakit::findorfail($id);
+        $data->delete();
         return back()->with('info', 'Data berhasil dihapus');
     }
 }

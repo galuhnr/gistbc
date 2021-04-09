@@ -32,3 +32,7 @@ Route::get('/deletetahun/{id}', 'App\Http\Controllers\TahunController@destroy')-
 // crud data kriteria
 Route::resource('datakriterias', 'App\Http\Controllers\DataKriteriaController');
 Route::get('/deletedata/{id}', 'App\Http\Controllers\DataKriteriaController@destroy')->name('deletedata');
+
+// crud data rumah sakit
+Route::resource('rumahsakit', 'App\Http\Controllers\RumahSakitController');
+Route::get('/deleters/{id}', 'App\Http\Controllers\RumahSakitController@destroy')->name('deleters');

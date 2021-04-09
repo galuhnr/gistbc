@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\DataKriteria;
+use App\Models\RumahSakit;
 
 class Kecamatan extends Model
 {
@@ -19,5 +20,9 @@ class Kecamatan extends Model
 
     public function datakriterias() {
         return $this->hasMany(DataKriteria::class);
+    }
+
+    public function rumahsakit() {
+        return $this->hasMany(RumahSakit::class);
     }
 }

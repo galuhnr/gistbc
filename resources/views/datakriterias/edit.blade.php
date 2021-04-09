@@ -14,17 +14,17 @@
                     {{ method_field('PUT') }}
                     {{ csrf_field()}}
                     <div class="card-body mx-4">
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label class="txt-label">Id data</label>
                             <input type="text" class="form-control" name="id_data" id="id_data" value="{{ $data->id_data }}">
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label class="txt-label">Tahun</label>
                             <select class="form-control" name="tahun_id" id="tahun_id">
                                 <option disabled value>Pilih Tahun</option>
-                                <option value="{{ $data->tahun_id }}">{{ $data->tahun->tahun }}</option>
+                                <option value="{{ $data->tahun_id }}">{{ $data->tahuns->tahun }}</option>
                                 @foreach($tahun as $item)
-                                <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
+                                    <option value="{{ $item->id_tahun }}">{{ $item->tahun }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -32,9 +32,9 @@
                             <label class="txt-label">Kecamatan</label>
                             <select class="form-control" name="kecamatan_id" id="kecamatan_id">
                                 <option disabled value>Pilih Kecamatan</option>
-                                <option value="{{ $data->kecamatan_id }}">{{ $data->nama_kecamatan->nama_kecamatan }}</option>
+                                <option value="{{ $data->kecamatan_id }}">{{ $data->kecamatans->nama_kecamatan }}</option>
                                 @foreach($kec as $item)
-                                <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
+                                    <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
                                 @endforeach
                             </select>
                         </div>

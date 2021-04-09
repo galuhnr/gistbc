@@ -14,12 +14,12 @@
                     <div class="card-body mx-4">
                         <div class="form-group">
                             <label class="txt-label">Id Kecamatan</label>
-                            <input type="text" class="form-control form-control-alternative" name="id_kecamatan" id="id_kecamatan" placeholder="Masukkan id">
+                            <input type="text" class="form-control" name="id_kecamatan" id="id_kecamatan" placeholder="Masukkan id">
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Nama Kecamatan</label>
-                            <input type="text" class="form-control form-control-alternative" name="nama_kecamatan" id="nama_kecamatan" placeholder="Masukkan nama kecamatan">
-                            <!-- <input type="password" class="form-control form-control-alternative" id="exampleInputPassword1" placeholder="Password"> -->
+                            <input type="text" class="form-control" name="nama_kecamatan" id="nama_kecamatan" placeholder="Masukkan nama kecamatan">
+                            <!-- <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-center">

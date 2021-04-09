@@ -13,8 +13,9 @@ class Tahun extends Migration
      */
     public function up()
     {
-        Schema::create('tahuns', function (Blueprint $table) {
-            $table->increments('id_tahun');
+        Schema::create('tb_tahun', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_tahun');
             $table->integer('tahun');
         });
     }
@@ -26,6 +27,6 @@ class Tahun extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tb_tahun');
     }
 }
