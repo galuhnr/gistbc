@@ -36,3 +36,7 @@ Route::get('/deletedata/{id}', 'App\Http\Controllers\DataKriteriaController@dest
 // crud data rumah sakit
 Route::resource('rumahsakit', 'App\Http\Controllers\RumahSakitController');
 Route::get('/deleters/{id}', 'App\Http\Controllers\RumahSakitController@destroy')->name('deleters');
+
+// crud data info tbc
+Route::resource('infotbc', 'App\Http\Controllers\InfoTBCController');
+Route::get('/deleteinfo/{id}', 'App\Http\Controllers\InfoTBCController@destroy')->name('deleteinfo');

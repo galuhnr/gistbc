@@ -107,7 +107,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="pages/gallery.html" class="nav-link">
+                <a href="{{ route('infotbc.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-info-circle"></i>
                     <p>Informasi TBC</p>
                 </a>

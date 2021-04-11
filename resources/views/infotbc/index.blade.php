@@ -1,5 +1,5 @@
 @extends('layouts.v_template')
-@section('title', 'Rumah Sakit')
+@section('title', 'Informasi TBC')
 
 @section('content')
 <div class="row mb-3 mt-2">
@@ -13,7 +13,7 @@
     </div>
     <div class="col-6 text-add">
         <button class="btn btn-sm btn-add mr-2"> 
-            <a href="{{ route('rumahsakit.create') }}">
+            <a href="{{ route('infotbc.create') }}">
             <i class="fas fa-plus"></i>&nbsp New Data</a>
         </button>    
     </div>
@@ -26,24 +26,20 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Kecamatan</th>
-                            <th>Rumah Sakit</th>
-                            <th>Alamat</th>
-                            <th>Nomer Telphone</th>
+                            <th>Nama Informasi</th>
+                            <th class="tb-info">Isi Informasi</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach ($data as $item)
                         <tr>
-                            <td>{{ $item->id_rs }}</td>
-                            <td>{{ $item->kecamatans->nama_kecamatan }}</td>
-                            <td>{{ $item->nama_rs }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>{{ $item->no_tlp }}</td>
+                            <td>{{ $item->id_info }}</td>
+                            <td>{{ $item->nama_info }}</td>
+                            <td>{{ $item->isi_info }}</td>
                             <td>
-                                <a href="{{ route('rumahsakit.edit',$item->id_rs) }}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
-                                <a href="{{ route('deleters',$item->id_rs) }}"><i class="fas fa-trash" style="color: #C23D54;"></i></a>
+                                <a href="{{ route('infotbc.edit',$item->id_info) }}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
+                                <a href="{{ route('deleteinfo',$item->id_info) }}"><i class="fas fa-trash" style="color: #C23D54;"></i></a>
                             </td>
                         </tr>
                     @endforeach
