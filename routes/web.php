@@ -40,3 +40,6 @@ Route::get('/deleters/{id}', 'App\Http\Controllers\RumahSakitController@destroy'
 // crud data info tbc
 Route::resource('infotbc', 'App\Http\Controllers\InfoTBCController');
 Route::get('/deleteinfo/{id}', 'App\Http\Controllers\InfoTBCController@destroy')->name('deleteinfo');
+
+// hasil clustering
+Route::resource('hasilcluster', 'App\Http\Controllers\PythonController');
