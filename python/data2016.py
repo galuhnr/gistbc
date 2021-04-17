@@ -5,6 +5,7 @@ DB_USER = "postgres"
 DB_PASS = "postgres"
 
 import psycopg2
+import json
 import pandas as pd
 import numpy as np
 from scipy.cluster.hierarchy import dendrogram, fcluster

@@ -81,7 +81,6 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-left">
                                 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                                <li class="breadcrumb-item active">@yield('title-nav')</li>
                                 <li class="breadcrumb-item active"><a href="">@yield('title')</a></li>
                             </ol>
                             <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->

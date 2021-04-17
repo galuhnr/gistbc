@@ -42,4 +42,4 @@ Route::resource('infotbc', 'App\Http\Controllers\InfoTBCController');
 Route::get('/deleteinfo/{id}', 'App\Http\Controllers\InfoTBCController@destroy')->name('deleteinfo');
 
 // hasil clustering
-Route::resource('hasilcluster', 'App\Http\Controllers\PythonController');
+Route::get('/hasilcluster2016', 'App\Http\Controllers\PythonController@hasil1')->name('hasilcluster2016');
