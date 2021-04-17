@@ -14,7 +14,7 @@
                     <div class="card-body mx-4">
                         <div class="form-group">
                             <label class="txt-label">Id Kecamatan</label>
-                            <input type="text" class="form-control form-control-alternative" name="id_kecamatan" id="id_kecamatan" value="{{ $kec->id_kecamatan }}">
+                            <input type="text" class="form-control form-control-alternative" name="id_kecamatan" id="id_kecamatan" value="{{ $kec->id_kecamatan }}" disabled>
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Nama Kecamatan</label>

@@ -16,7 +16,7 @@
                     <div class="card-body mx-4">
                         <div class="form-group">
                             <label class="txt-label">Id tahun</label>
-                            <input type="text" class="form-control form-control-alternative" name="id_tahun" id="id_tahun" value="{{ $thn->id_tahun }}">
+                            <input type="text" class="form-control form-control-alternative" name="id_tahun" id="id_tahun" value="{{ $thn->id_tahun }}" disabled>
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Tahun</label>

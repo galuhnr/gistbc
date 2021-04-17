@@ -16,7 +16,7 @@
                     <div class="card-body mx-4">
                         <div class="form-group">
                             <label class="txt-label">Id data</label>
-                            <input type="text" class="form-control" name="id_rs" id="id_rs" placeholder="Masukkan id data" value="{{ $data->id_rs }}">
+                            <input type="text" class="form-control" name="id_rs" id="id_rs" placeholder="Masukkan id data" value="{{ $data->id_rs }}" disabled>
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Kecamatan</label>

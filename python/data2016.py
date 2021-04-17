@@ -43,8 +43,16 @@ for ind, row in hasil.iterrows():
     hasil.loc[hasil['cluster'] == 2 , 'kategori'] = 'Sedang' 
     hasil.loc[hasil['cluster'] == 3 , 'kategori'] = 'Tinggi' 
 
+# data nama kecamatan
+cur.execute("SELECT nama_kecamatan from kecamatans")
+datakec = cur.fetchall()
+kec = pd.DataFrame(datakec, columns=["kecamatan"])
+
+data_new = pd.concat([hasil,kec], axis=1)
+#print(data_new)
+
 # print(hasil)
-json = hasil.to_json(orient='records')
+json = data_new.to_json(orient='records')
 print(json)
 
 cur.close()
