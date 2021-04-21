@@ -16,7 +16,7 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS)
 cur = conn.cursor()
 
 #perintah sql
-cur.execute("SELECT jml_faskes, jml_kasus, jml_rumahts, jml_kp FROM data_kriterias where tahun_id=0;")
+cur.execute("SELECT jml_faskes, jml_kasus, jml_rumahts, jml_kp FROM data_kriterias where tahun_id=1;")
 
 #mengambil data
 dataset = cur.fetchall()

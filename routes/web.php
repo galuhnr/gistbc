@@ -41,5 +41,14 @@ Route::get('/deleters/{id}', 'App\Http\Controllers\RumahSakitController@destroy'
 Route::resource('infotbc', 'App\Http\Controllers\InfoTBCController');
 Route::get('/deleteinfo/{id}', 'App\Http\Controllers\InfoTBCController@destroy')->name('deleteinfo');
 
-// hasil clustering
+// hasil clustering 2016
 Route::get('/hasilcluster2016', 'App\Http\Controllers\PythonController@hasil1')->name('hasilcluster2016');
+
+// hasil clustering 2017
+Route::get('/hasilcluster2017', 'App\Http\Controllers\PythonController@hasil2')->name('hasilcluster2017');
+
+// hasil clustering 2018
+Route::get('/hasilcluster2018', 'App\Http\Controllers\PythonController@hasil3')->name('hasilcluster2018');
+
+// hasil clustering 9
+Route::get('/hasilcluster2019', 'App\Http\Controllers\PythonController@hasil4')->name('hasilcluster2019');

@@ -87,19 +87,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/tables/data.html" class="nav-link">
+                        <a href="{{ route('hasilcluster2017') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>2017</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/tables/jsgrid.html" class="nav-link">
+                        <a href="{{ route('hasilcluster2018') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>2018</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/tables/jsgrid.html" class="nav-link">
+                        <a href="{{ route('hasilcluster2019') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>2019</p>
                         </a>
