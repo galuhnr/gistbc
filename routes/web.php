@@ -17,6 +17,15 @@ Route::get('/', function () {
     return view('v_peta');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/daftar', function () {
+    return view('register');
+});
+
+
 // crud data kecamatan
 Route::get('/datakecamatan', 'App\Http\Controllers\KecamatanController@index')->name('datakecamatan');
 Route::get('/createkecamatan', 'App\Http\Controllers\KecamatanController@create')->name('createkecamatan');
@@ -50,5 +59,5 @@ Route::get('/hasilcluster2017', 'App\Http\Controllers\PythonController@hasil2')-
 // hasil clustering 2018
 Route::get('/hasilcluster2018', 'App\Http\Controllers\PythonController@hasil3')->name('hasilcluster2018');
 
-// hasil clustering 9
+// hasil clustering 2019
 Route::get('/hasilcluster2019', 'App\Http\Controllers\PythonController@hasil4')->name('hasilcluster2019');

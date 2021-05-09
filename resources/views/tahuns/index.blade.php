@@ -36,7 +36,7 @@
                             <td>{{ $item->id_tahun }}</td>
                             <td>{{ $item->tahun }}</td>
                             <td class="text-center">
-                                <a href="{{ route('tahuns.edit', $item->id_tahun)}}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
+                                <a href="{{ route('tahuns.edit',$item->id_tahun)}}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
                                 <a href="{{ route('deletetahun',$item->id_tahun) }}"><i class="fas fa-trash" style="color: #C23D54;"></i></a>
                             </td>
                         </tr>
