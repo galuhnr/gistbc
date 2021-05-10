@@ -46,7 +46,7 @@
     font-weight: 600 !important; 
     font-family: 'Open Sans', sans-serif;
     color: #1F283E !important; 
-    font-size:24px !important;
+    font-size:18px !important;
 }
 .txt-label{
     font-family: 'Open Sans', sans-serif;
@@ -92,3 +92,7 @@ textarea:focus {
       outline-width: 0 !important;
 }
 
+.main-footer{
+    background-color: #f4f6f9 !important;
+    border-top: none !important;
+}

@@ -1,5 +1,5 @@
 @extends('layouts.v_template')
-@section('title', 'Isi Data Kriteria')
+@section('title', 'Data Kriteria')
 
 @section('content')
 <!-- <div class="container"> -->
@@ -7,9 +7,9 @@
         <div class="col-8 ml-4">  
             <div class="card card-light">
                 <div class="card-header">
-                    <h3 class="card-title cd-title">Data Kriteria</h3>
+                    <h3 class="card-title cd-title">Isi Data Kriteria</h3>
                 </div>
-                <form role="form" action="{{ route('datakriterias.store')}}" method="post" >
+                <form role="form" action="{{ route('datakriteria.store')}}" method="post" >
                     {{ csrf_field()}}
                     <div class="card-body mx-4">
                         <div class="form-group">

@@ -1,5 +1,5 @@
 @extends('layouts.v_template')
-@section('title', 'Data Kriteria')
+@section('title', 'Data Tahun')
 
 @section('content')
 <div class="row mb-3 mt-2">
@@ -13,7 +13,7 @@
     </div>
     <div class="col-6 text-add">
         <button class="btn btn-sm btn-add mr-2"> 
-            <a href="{{ route('datakriterias.create') }}">
+            <a href="{{ route('tahun.create') }}">
             <i class="fas fa-plus"></i>&nbsp New Data</a>
         </button>    
     </div>
@@ -27,27 +27,17 @@
                         <tr>
                             <th>#</th>
                             <th>Tahun</th>
-                            <th>Kecamatan</th>
-                            <th>Jumlah Faskes</th>
-                            <th>Jumlah Kasus</th>
-                            <th>Rumah Tidak Sehat</th>
-                            <th>Kepadatan Penduduk</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($data as $item)
+                    @foreach ($datathn as $item)
                         <tr>
-                            <td>{{ $item->id_data }}</td>
-                            <td>{{ $item->tahuns->tahun }}</td>
-                            <td>{{ $item->kecamatans->nama_kecamatan }}</td>
-                            <td class="text-center" >{{ $item->jml_faskes }}</td>
-                            <td class="text-center">{{ $item->jml_kasus }}</td>
-                            <td class="text-center">{{ $item->jml_rumahts }}</td>
-                            <td class="text-center">{{ $item->jml_kp }}</td>
-                            <td>
-                                <a href="{{ route('datakriterias.edit', $item->id_data)}}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
-                                <a href="{{ route('deletedata',$item->id_data) }}"><i class="fas fa-trash" style="color: #C23D54;"></i></a>
+                            <td>{{ $item->id_tahun }}</td>
+                            <td>{{ $item->tahun }}</td>
+                            <td class="text-center">
+                                <a href="{{ route('tahun.edit',$item->id_tahun)}}"><i class="fas fa-edit" style="color: #66799E;"></i></a>&nbsp|&nbsp
+                                <a href="{{ route('deletetahun',$item->id_tahun) }}"><i class="fas fa-trash" style="color: #C23D54;"></i></a>
                             </td>
                         </tr>
                     @endforeach

@@ -19,7 +19,7 @@ class DataKriteriaController extends Controller
     {
         $data= DataKriteria::with('tahuns', 'kecamatans')->get();
         // return response()->json( [$data] );
-        return view('datakriterias.index', compact('data'));
+        return view('datakriteria.index', compact('data'));
     }
 
     /**
@@ -31,7 +31,7 @@ class DataKriteriaController extends Controller
     {
         $tahun = Tahun::all();
         $kec = Kecamatan::all();
-        return view('datakriterias.create', compact('tahun','kec'));
+        return view('datakriteria.create', compact('tahun','kec'));
     }
 
     /**
@@ -82,7 +82,7 @@ class DataKriteriaController extends Controller
         $tahun = Tahun::all();
         $kec = Kecamatan::all();
         $data = DataKriteria::with('tahuns','kecamatans')->findorfail($id);
-        return view('datakriterias.edit', compact('data','tahun','kec'));
+        return view('datakriteria.edit', compact('data','tahun','kec'));
     }
 
     /**
@@ -96,7 +96,7 @@ class DataKriteriaController extends Controller
     {
         $data = DataKriteria::findorfail($id);
         $data->update($request->all());
-        return redirect('datakriterias')->with('toast_success', 'Data berhasil diupdate');
+        return redirect('datakriteria')->with('toast_success', 'Data berhasil diupdate');
     }
 
     /**

@@ -1,6 +1,5 @@
 @extends('layouts.v_template')
 @section('title', 'Data Kriteria')
-@section('title-nav', 'Edit Data Kriteria')
 
 @section('content')
 <!-- <div class="container"> -->
@@ -8,9 +7,9 @@
         <div class="col-8 ml-4">  
             <div class="card card-light">
                 <div class="card-header">
-                    <h3 class="card-title cd-title">Data Kriteria</h3>
+                    <h3 class="card-title cd-title">Ubah Data Kriteria</h3>
                 </div>
-                <form role="form" action="{{ route('datakriterias.update',$data->id_data)}}" method="post" >
+                <form role="form" action="{{ route('datakriteria.update',$data->id_data)}}" method="post" >
                     {{ method_field('PUT') }}
                     {{ csrf_field()}}
                     <div class="card-body mx-4">

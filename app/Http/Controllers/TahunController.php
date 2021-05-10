@@ -18,7 +18,7 @@ class TahunController extends Controller
     {
         
         $datathn = Tahun::all();
-        return view('tahuns.index', compact('datathn'));
+        return view('tahun.index', compact('datathn'));
     }
 
     /**
@@ -28,7 +28,7 @@ class TahunController extends Controller
      */
     public function create()
     {
-        return view('tahuns.create');
+        return view('tahun.create');
     }
 
     /**
@@ -48,7 +48,7 @@ class TahunController extends Controller
             return response(['error' => $validator->errors(), 'Validation Error']);
         }
         $tahun = Tahun::create($data);
-        return redirect('tahuns')->with('toast_success', 'Data berhasil disimpan!');
+        return redirect('tahun')->with('toast_success', 'Data berhasil disimpan!');
     }
 
     /**
@@ -71,7 +71,7 @@ class TahunController extends Controller
     public function edit($id)
     {
         $thn = Tahun::findorfail($id);
-        return view('tahuns.edit', compact('thn'));
+        return view('tahun.edit', compact('thn'));
         // return view('tahuns.create');
     }
 
@@ -86,7 +86,7 @@ class TahunController extends Controller
     {
         $thn = Tahun::findorfail($id);
         $thn->update($request->all());
-        return redirect('tahuns')->with('toast_success', 'Data berhasil diupdate');
+        return redirect('tahun')->with('toast_success', 'Data berhasil diupdate');
     }
 
     /**

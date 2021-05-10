@@ -41,7 +41,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                    <a href="" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,9 +50,12 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Edit Profil</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" style="color: #951F33;">
+                        <a class="dropdown-item" style="color: #951F33;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt mr-2"></i>Logout
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </div>
                 </li>
             </ul>
@@ -78,9 +81,9 @@
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-left">
-                                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <div class="col-sm-12">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="">Dashboard</a></li>
                                 <li class="breadcrumb-item active"><a href="">@yield('title')</a></li>
                             </ol>
                             <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
@@ -99,6 +102,9 @@
         </div>
     </div>
     <!-- ./wrapper -->
+    <footer class="main-footer">
+        <strong>Copyright &copy;</strong>&nbspGaluh Nurul
+    </footer>
 
     <!-- jQuery -->
     <script src="{{asset('template')}}/plugins/jquery/jquery.min.js"></script>

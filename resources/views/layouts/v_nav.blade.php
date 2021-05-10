@@ -6,7 +6,7 @@
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview mt-2">
-                <a href="#" class="nav-link active">
+                <a href="" class="nav-link active">
                     <i class="nav-icon fas fa-home"></i>
                     <p>
                         Dashboard
@@ -46,19 +46,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{ route('tahuns.index') }}" class="nav-link">
+                        <a href="{{ route('tahun.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Data Tahun</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('datakecamatan') }}" class="nav-link">
+                        <a href="{{ route('kecamatan') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Data Kecamatan</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('datakriterias.index') }}" class="nav-link">
+                        <a href="{{ route('datakriteria.index') }}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Data Kriteria</p>
                         </a>
