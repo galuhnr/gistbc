@@ -1,6 +1,8 @@
 @extends('layouts.v_template')
 @section('title', 'Data Kecamatan')
-
+@section('breadcrumbs')
+{{Breadcrumbs::render('editkecamatan',$kec)}}
+@endsection
 @section('content')
 <!-- <div class="container"> -->
     <div class="row">

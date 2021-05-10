@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
 @section('title', 'Isi Informasi TBC')
-
+@section('breadcrumbs', Breadcrumbs::render('infotbc.create'))
 @section('content')
 <!-- <div class="container"> -->
     <div class="row">

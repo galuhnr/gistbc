@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
 @section('title', 'Hasil Klustering 2019')
-
+@section('breadcrumbs', Breadcrumbs::render('hasilcluster2019'))
 @section('content')
 <div class="row">
     <div class="col-12">

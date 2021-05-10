@@ -1,7 +1,8 @@
 @extends('layouts.v_template')
-@section('title', 'Data Rumah Sakit')
-@section('title-nav', 'Edit Data Rumah Sakit')
-
+@section('title', 'Edit Data Rumah Sakit')
+@section('breadcrumbs')
+{{Breadcrumbs::render('rumahsakit.edit',$data)}}
+@endsection
 @section('content')
 <!-- <div class="container"> -->
     <div class="row">

@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
-@section('title', 'Data Kriteria')
-
+@section('title', 'Tambah Data Kriteria')
+@section('breadcrumbs', Breadcrumbs::render('datakriteria.create'))
 @section('content')
 <!-- <div class="container"> -->
     <div class="row">

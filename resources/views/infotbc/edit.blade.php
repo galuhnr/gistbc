@@ -1,7 +1,8 @@
 @extends('layouts.v_template')
-@section('title', 'Informasi TBC')
-@section('title-nav', 'Edit Data Informasi TBC')
-
+@section('title', 'Edit Data Informasi TBC')
+@section('breadcrumbs')
+{{Breadcrumbs::render('infotbc.edit',$info)}}
+@endsection
 @section('content')
 <!-- <div class="container"> -->
     <div class="row">

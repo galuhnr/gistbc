@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
 @section('title', 'Data Tahun')
-
+@section('breadcrumbs', Breadcrumbs::render('tahun'))
 @section('content')
 <div class="row mb-3 mt-2">
     <div class="col-6">

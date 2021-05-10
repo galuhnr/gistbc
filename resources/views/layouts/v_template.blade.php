@@ -41,7 +41,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="" class="nav-link">Home</a>
+                    <a href="{{route('home')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -80,11 +80,10 @@
             <!-- Content Header (Page header) -->
             <div class="content-header">
                 <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-12">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-                                <li class="breadcrumb-item active"><a href="">@yield('title')</a></li>
+                    <div class="row mb-2 ml-2">
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-left">
+                                <li class="breadcrumb-item active">@yield('breadcrumbs')</li>
                             </ol>
                             <!-- <h1 class="m-0 text-dark">Dashboard</h1> -->
                         </div>

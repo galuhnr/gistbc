@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
 @section('title', 'Informasi TBC')
-
+@section('breadcrumbs', Breadcrumbs::render('infotbc'))
 @section('content')
 <div class="row mb-3 mt-2">
     <div class="col-6">

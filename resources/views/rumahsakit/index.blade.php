@@ -1,6 +1,6 @@
 @extends('layouts.v_template')
 @section('title', 'Rumah Sakit')
-
+@section('breadcrumbs', Breadcrumbs::render('rumahsakit'))
 @section('content')
 <div class="row mb-3 mt-2">
     <div class="col-6">
