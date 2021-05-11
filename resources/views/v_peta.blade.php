@@ -2,47 +2,60 @@
 @section('title', 'Pemetaan')
 
 @section('content')
-    <!-- Map card -->
-    <div class="card bg-gradient-primary">
-        <div class="card-header border-0">
-            <h3 class="card-title">
-                <i class="fas fa-map-marker-alt mr-1"></i>Visitors
-            </h3>
-            <!-- card tools -->
-            <div class="card-tools">
-                <button type="button"
-                        class="btn btn-primary btn-sm daterange"
-                        data-toggle="tooltip"
-                        title="Date range">
-                    <i class="far fa-calendar-alt"></i>
-                </button>
-                <button type="button"
-                        class="btn btn-primary btn-sm"
-                        data-card-widget="collapse"
-                        data-toggle="tooltip"
-                        title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-            </div> <!-- /.card-tools -->
-        </div>
-        <div class="card-body">
-            <div id="world-map" style="height: 250px; width: 100%;"></div>
-        </div> <!-- /.card-body-->
-        <div class="card-footer bg-transparent">
-            <div class="row">
-                <div class="col-4 text-center">
-                    <div id="sparkline-1"></div>
-                    <div class="text-white">Visitors</div>
-                </div> 
-                <div class="col-4 text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="text-white">Online</div>
-                </div>   
-                <div class="col-4 text-center">
-                    <div id="sparkline-3"></div>
-                    <div class="text-white">Sales</div>
-                </div>
-            </div>   
-        </div>
-    </div>
+<div id="map" style="height: 480px;"></div>
+<script src="{{asset('assets')}}/surabaya.js"></script>
+<script>
+    var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11'
+	});
+
+    var peta2 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/satellite-v9'
+	});
+
+
+    var peta3 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	});
+
+    var peta4 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/dark-v10'
+	});
+
+    var kecamatan = L.layerGroup();
+    var map = L.map('map', {
+        center: [-7.255060272702616, 112.75017195764367],
+        zoom: 12,
+        layers: [peta1,kecamatan]
+    });
+
+    var baseMaps = {
+        "Grayscale": peta1,
+        "Satelit":peta2,
+        "Streets": peta3,
+        "Dark": peta4,
+    };
+
+    var overlayer = {
+        "2016" : kecamatan,
+        "2017" : kecamatan,
+    };
+
+    L.control.layers(baseMaps,overlayer).addTo(map);
+    @foreach($kecamatan as $data)
+        L.geoJSON(<?= $data->geojson ?>).addTo(kecamatan);
+    @endforeach
+
+</script>
+
 @endsection
+

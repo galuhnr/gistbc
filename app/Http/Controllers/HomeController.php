@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HomeModel;
+use App\Models\Kecamatan;
 
 class HomeController extends Controller
 {
@@ -14,6 +16,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->HomeModel = new HomeModel();
     }
 
     /**
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('v_peta');
+        $data = [
+            'kecamatan'=>$this->HomeModel->DataKecamatan(),
+        ];
+        return view('v_peta', $data);
     }
 }

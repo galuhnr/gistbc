@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/hasilcluster2016', 'App\Http\Controllers\PythonController@hasil1')->name('hasilcluster2016');
