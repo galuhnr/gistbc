@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/hasilcluster2016', 'App\Http\Controllers\PythonController@hasil1')->name('hasilcluster2016');
+Route::get('/cluster2016', 'App\Http\Controllers\PythonController@result1')->name('cluster2016');
