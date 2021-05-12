@@ -20,12 +20,6 @@ class PythonController extends Controller
         return view('hasilcluster.index2016',['collections'=>$data]);
     }
 
-    public function result1()
-    {
-        $result = shell_exec("python " . base_path(). "\python\data2016.py 2>&1");
-        echo $result;
-    }
-
     public function hasil2()
     {
         $result = shell_exec("python " . base_path(). "\python\data2017.py 2>&1");
@@ -47,4 +41,29 @@ class PythonController extends Controller
         return view('hasilcluster.index2019',['collections'=>$data]);
     }
     
+    // api
+    
+    public function result1()
+    {
+        $result = shell_exec("python " . base_path(). "\python\data2016.py 2>&1");
+        echo $result;
+    }
+
+    public function result2()
+    {
+        $result = shell_exec("python " . base_path(). "\python\data2017.py 2>&1");
+        echo $result;
+    }
+
+    public function result3()
+    {
+        $result = shell_exec("python " . base_path(). "\python\data2018.py 2>&1");
+        echo $result;
+    }
+
+    public function result4()
+    {
+        $result = shell_exec("python " . base_path(). "\python\data2019.py 2>&1");
+        echo $result;
+    }
 }
