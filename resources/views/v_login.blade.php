@@ -8,88 +8,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('template')}}/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- icheck bootstrap -->
-  <link rel="stylesheet" href="{{asset('template')}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('template')}}/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{asset('template')}}/dist/css/adminlte.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{asset('assets')}}/css/style.css">
 
   <style>
-    .login-title{
-      text-align: center;
-      margin: 0;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #152946;
-    }
     .hero-image{
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{asset('assets')}}/img/bg.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("{{asset('assets')}}/img/sby.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
     }
-    .link-daftar{
-      color: #243C60;
-      text-decoration: underline;
-    }
   </style>
 </head>
-<body class="hold-transition login-page hero-image">
-  <div class="login-box">
-      <div class="card card-light">
-        <div class="card-header">
-          <h3 class="login-title">LOGIN ADMIN</h3>
+<body class="hero-image" >
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Selamat Datang Website Pemetaan Penyakit TBC Kota Surabaya</h2>
         </div>
-        <form method="POST" action="{{ route('login') }}">
-          @csrf
-          <div class="card-body login-card-body">
-            <div class="input-group mb-4 mt-2">
-              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan email">
-              @error('email')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-envelope"></span>
-                </div>
-              </div>
-            </div>
-            <div class="input-group mb-4">
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukkan password">
-              @error('password')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-              @enderror
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-lock"></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12 mb-0">
-                <button type="submit" class="btn btn-block" style="background-color: #243C60; color: white;">Login</button>
-                <p class="mt-2" style="font-size:12px;">Belum punya akun?&nbsp&nbsp<span><a href="{{ route('register') }}" class="link-daftar">Daftar</a></span></p>
-              </div>
-            </div>
-          </div>
-        </form>
       </div>
-  </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="login-wrap p-0">
+            <form method="POST" action="{{ route('login') }}" >
+              @csrf
+              <div class="form-group">
+                <input id="email" type="email" class="form-login @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan email">
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+              </div>
+              <div class="form-group">
+                <input id="password" type="password" class="form-login @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukkan password">
+                <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+              </div>
+              <div class="form-group mt-4">
+                <button type="submit" class="btn btn-block" style="background-color: #243C60; color: white; border-radius: 40px;">Masuk</button>
+              </div>
+              <div class="form-group d-md-flex">
+                <div class="w-50 text-md-right">
+                  <p>Belum punya akun?&nbsp&nbsp<span><a href="{{ route('register') }}" class="link-daftar">Daftar</a></span></p>
+								</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- jQuery -->
 <script src="{{asset('template')}}/plugins/jquery/jquery.min.js"></script>
+<!-- Popper -->
+<script src="{{asset('assets')}}/js/popper.js"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('template')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('template')}}/dist/js/adminlte.min.js"></script>
+<script src="{{asset('template')}}/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Main -->
+<script src="{{asset('assets')}}/js/main.js"></script>
+
 
 </body>
 </html>

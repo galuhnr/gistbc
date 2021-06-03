@@ -83,7 +83,7 @@
     color: #BDBDBD !important;
     letter-spacing: 1px !important;
     opacity: 1 !important;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
     font-size: 14px !important;
 }
 input:focus,
@@ -95,4 +95,52 @@ textarea:focus {
 .main-footer{
     background-color: #f4f6f9 !important;
     border-top: none !important;
+}
+
+/* login & register form */
+.link-daftar{
+    color: #ff0000;
+    text-decoration: underline;
+}
+  
+.ftco-section {
+    padding: 7em 0; 
+}
+.ftco-section-regis {
+    padding: 3.7em 0; 
+}
+.heading-section {
+    font-size: 32px;
+    color: #fff; 
+    font-family: 'Lato';
+    letter-spacing: 0.1rem;
+    line-height: 50px;
+}
+
+.login-wrap {
+    position: relative;
+    color: rgba(255, 255, 255, 0.9) !important; 
+}
+.form-login{
+    height: 50px;
+    color: white !important;
+    border: 1px solid transparent !important;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    transition: 0.3s;
+}
+.form-login{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.field-icon{
+    position: absolute;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
 }
