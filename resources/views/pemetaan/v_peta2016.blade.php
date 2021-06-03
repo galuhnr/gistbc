@@ -10,13 +10,36 @@
     font-size:10px;
 }
 </style>
-
-<div id="map" style="height: 490px;"></div>
+<div class="row pr-3 pb-3">
+    <div class="col-6">
+        <h5>Pemetaan Tingkat Kerawanan Penyakit TBC Tahun 2016</h5>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <select id="selectMap">
+            <option value="" selected>Pilih Tahun</option>
+            <option value="1" href="{{route('home')}}" >2016</option>
+            <option value="2" href="{{route('peta2017')}}">2017</option>
+            <option value="3" href="{{route('peta2018')}}">2018</option>
+            <option value="4" href="{{route('peta2019')}}">2019</option>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="map" style="height: 440px;"></div>
+    </div>
+</div>
+<!-- javascript -->
+<!-- script untuk berpindah ke peta lain -->
+<script type="text/javascript">
+    document.getElementById('selectMap').onchange = function() {
+        window.location.href = this.children[this.selectedIndex].getAttribute('href');
+    }
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script type="text/javascript">
-    
-    var peta1 = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    var peta = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -25,8 +48,8 @@
 
     var map = L.map('map', {
         center: [-7.255060272702616, 112.75017195764367],
-        zoom: 11.5,
-        layers: [peta1]
+        zoom: 11.4,
+        layers: [peta]
     });
 
     var api = 'http://127.0.0.1:8000/api/cluster2016';

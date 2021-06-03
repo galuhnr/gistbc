@@ -23,7 +23,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('v_peta');
+        return view('pemetaan.v_peta2016');
     }
 
+    public function peta_2017()
+    {
+        return view('pemetaan.v_peta2017');
+    }
+
+    public function peta_2018()
+    {
+        return view('pemetaan.v_peta2018');
+    }
+
+    public function peta_2019()
+    {
+        return view('pemetaan.v_peta2019');
+    }
 }

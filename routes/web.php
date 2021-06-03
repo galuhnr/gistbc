@@ -49,5 +49,10 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('/hasilcluster2018', 'App\Http\Controllers\PythonController@hasil3')->name('hasilcluster2018');
     Route::get('/hasilcluster2019', 'App\Http\Controllers\PythonController@hasil4')->name('hasilcluster2019');
 
+    //pemetaan tingkat kerawanan
+    Route::get('peta2017', 'App\Http\Controllers\HomeController@peta_2017')->name('peta2017');
+    Route::get('peta2018', 'App\Http\Controllers\HomeController@peta_2018')->name('peta2018');
+    Route::get('peta2019', 'App\Http\Controllers\HomeController@peta_2019')->name('peta2019');
+
 });
 
