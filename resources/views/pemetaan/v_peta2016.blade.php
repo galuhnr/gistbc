@@ -16,8 +16,8 @@
     </div>
     <div class="col-6 d-flex justify-content-end">
         <select id="selectMap">
-            <option value="" selected>Pilih Tahun</option>
-            <option value="1" href="{{route('home')}}" >2016</option>
+            <option value="" >Pilih Tahun</option>
+            <option value="1" href="{{route('home')}}" selected>2016</option>
             <option value="2" href="{{route('peta2017')}}">2017</option>
             <option value="3" href="{{route('peta2018')}}">2018</option>
             <option value="4" href="{{route('peta2019')}}">2019</option>
