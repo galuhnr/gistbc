@@ -100,4 +100,11 @@ class InfoTBCController extends Controller
         $info->delete();
         return back()->with('info', 'Data berhasil dihapus');
     }
+
+    public function dataInfo()
+    {
+        $data= InfoTBC::all();
+        $result = json_encode($data);
+        echo $result;
+    }
 }

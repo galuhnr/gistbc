@@ -54,5 +54,8 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('peta2018', 'App\Http\Controllers\HomeController@peta_2018')->name('peta2018');
     Route::get('peta2019', 'App\Http\Controllers\HomeController@peta_2019')->name('peta2019');
 
+    //grafik
+    Route::get('grafik', 'App\Http\Controllers\HomeController@grafik')->name('grafik');
+
 });
 

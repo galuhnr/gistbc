@@ -15,7 +15,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{route('home')}}" class="nav-link active">
+                        <a href="{{route('home')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Peta TBC</p>
                         </a>
@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index3.html" class="nav-link">
+                        <a href="{{route('grafik')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Grafik Tingkat Kerawanan</p>
                         </a>

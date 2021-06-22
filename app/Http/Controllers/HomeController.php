@@ -40,4 +40,9 @@ class HomeController extends Controller
     {
         return view('pemetaan.v_peta2019');
     }
+
+    public function grafik()
+    {
+        return view('grafik.index');
+    }
 }

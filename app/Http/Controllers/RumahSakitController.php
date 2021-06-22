@@ -106,4 +106,11 @@ class RumahSakitController extends Controller
         $data->delete();
         return back()->with('info', 'Data berhasil dihapus');
     }
+
+    public function dataRS()
+    {
+        $data= RumahSakit::with('kecamatans')->get();
+        $result = json_encode($data);
+        echo $result;
+    }
 }
