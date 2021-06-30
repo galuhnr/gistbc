@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.tbcapp.adapter.RSAdapter;
@@ -32,9 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         alamatPresenter = new AlamatPresenter(this);
         alamatPresenter.getData();
 
-
     }
-
 
     @Override
     public void onGetResult(List<ModelRS> alamatList) {
