@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kecamatan;
-use Illuminate\Support\Facades\DB;
 
 class PythonController extends Controller
 {
@@ -66,4 +64,19 @@ class PythonController extends Controller
         $result = shell_exec("python " . base_path(). "\python\data2019.py 2>&1");
         echo $result;
     }
+
+    public function dataAll(){
+        $result = shell_exec("python " . base_path(). "\python\data2016.py 2>&1");
+        $data = json_decode($result);
+        $result1 = shell_exec("python " . base_path(). "\python\data2017.py 2>&1");
+        $data1 = json_decode($result1);
+        $result2 = shell_exec("python " . base_path(). "\python\data2018.py 2>&1");
+        $data2 = json_decode($result2);
+        $result3 = shell_exec("python " . base_path(). "\python\data2019.py 2>&1");
+        $data3 = json_decode($result3);
+
+        $ss = json_encode(array_merge($data,$data1,$data2,$data3));
+        echo $ss;
+    }
+
 }

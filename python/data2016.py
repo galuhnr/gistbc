@@ -16,7 +16,7 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS)
 cur = conn.cursor()
 
 #perintah sql
-cur.execute("SELECT jml_faskes, jml_kasus, jml_rumahts, jml_kp FROM data_kriterias where tahun_id=0;")
+cur.execute("SELECT jml_faskes, jml_kasus, jml_rumahts, jml_kp FROM data_kriterias where tahun_id=0 order by kecamatan_id asc;")
 
 #mengambil data
 dataset = cur.fetchall()
@@ -44,12 +44,12 @@ for ind, row in hasil.iterrows():
     hasil.loc[hasil['cluster'] == 3 , 'kategori'] = 'Tinggi' 
 
 # data nama kecamatan
-cur.execute("SELECT nama_kecamatan from kecamatans")
+cur.execute("SELECT data_kriterias.tahun_id, data_kriterias.kecamatan_id, kecamatans.nama_kecamatan from data_kriterias inner join kecamatans on data_kriterias.kecamatan_id = kecamatans.id_kecamatan where data_kriterias.tahun_id=0 order by data_kriterias.kecamatan_id asc;")
 datakec = cur.fetchall()
-kec = pd.DataFrame(datakec, columns=["kecamatan"])
+kec = pd.DataFrame(datakec, columns=["tahun","kecamatan","nama_kecamatan"])
 
-data_new = pd.concat([hasil,kec], axis=1)
-#print(data_new)
+data_new = pd.concat([kec,hasil], axis=1)
+# print(data_new)
 
 json = data_new.to_json(orient='records')
 print(json)

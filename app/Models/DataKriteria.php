@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Tahun;
 use App\Models\Kecamatan;
+use Illuminate\Support\Facades\DB;
 
 class DataKriteria extends Model
 {
@@ -22,14 +23,16 @@ class DataKriteria extends Model
         'jml_rumahts',
         'jml_kp',
     ];
+
+    public function AllData(){
+        return DB::table('data_kriterias')->get();
+    }
      
     public function tahuns() {
-
         return $this->belongsTo(Tahun::class,'tahun_id');
     }
 
     public function kecamatans() {
-        
         return $this->belongsTo(Kecamatan::class, 'kecamatan_id');
     }
 }

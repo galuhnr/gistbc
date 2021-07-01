@@ -23,7 +23,7 @@
                     @foreach ($collections as $data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $data->kecamatan }}</td>
+                            <td>{{ $data->nama_kecamatan }}</td>
                             <td>{{ $data->jml_faskes }}</td>
                             <td>{{ $data->jml_kasus }}</td>
                             <td>{{ $data->jml_rumahts }}</td>

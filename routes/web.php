@@ -56,6 +56,7 @@ Route::group(['middleware'=>'auth'], function() {
 
     //grafik
     Route::get('grafik', 'App\Http\Controllers\HomeController@grafik')->name('grafik');
+    Route::get('grafikDataKriteria', 'App\Http\Controllers\HomeController@grafik2')->name('grafikDataKriteria');
 
 });
 

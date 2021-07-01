@@ -23,5 +23,7 @@ Route::get('/cluster2017', 'App\Http\Controllers\PythonController@result2')->nam
 Route::get('/cluster2018', 'App\Http\Controllers\PythonController@result3')->name('cluster2018');
 Route::get('/cluster2019', 'App\Http\Controllers\PythonController@result4')->name('cluster2019');
 
+Route::get('/cluster', 'App\Http\Controllers\PythonController@dataAll')->name('cluster');
+
 Route::get('/datars', 'App\Http\Controllers\RumahSakitController@dataRS')->name('datars');
 Route::get('/infotbc', 'App\Http\Controllers\InfoTBCController@dataInfo')->name('infotbc');

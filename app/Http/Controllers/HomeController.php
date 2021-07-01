@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\DataKriteria;
 
 class HomeController extends Controller
 {
@@ -14,6 +15,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->DataKriteria = new DataKriteria();
     }
 
     /**
@@ -43,6 +45,13 @@ class HomeController extends Controller
 
     public function grafik()
     {
-        return view('grafik.index');
+        return view('grafik.gfTingkatKerawanan');
+    }
+
+    public function grafik2(){
+        $data = [
+            'data' => $this->DataKriteria->AllData(),
+        ];
+        return view('grafik.gfDataKriteria', $data);
     }
 }

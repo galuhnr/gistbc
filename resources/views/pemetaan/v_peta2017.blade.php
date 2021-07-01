@@ -71,7 +71,7 @@
     }
     // atur style
     function style(f) {
-        var kecamatan=f.properties.kecamatan;
+        var kecamatan=f.properties.state_code;
         result = dataCluster[kecamatan];
         console.log(result);
         return {
@@ -145,9 +145,9 @@
                     // console.log(data_cluster);
                 }      
                 
-                $.getJSON("{{asset('assets')}}/surabaya.geojson", function(data_coordinate){
+                $.getJSON("{{asset('assets')}}/sby.geojson", function(data_coordinate){
                         for(i=0;i<31;i++){
-                            var kecamatan = data_coordinate.features[i].properties.kecamatan;
+                            var kecamatan = data_coordinate.features[i].properties.state_code;
                         }
                         geojson[kecamatan]=L.geoJSON(data_coordinate,{
                             onEachFeature: onEachFeature,
