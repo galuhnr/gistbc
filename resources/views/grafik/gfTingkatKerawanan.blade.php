@@ -40,13 +40,14 @@ var tinggi2019=0;
 
 // getData();
 $.ajax({  
-    url: 'http://127.0.0.1:8000/api/cluster2016', 
+    url: 'http://127.0.0.1:8000/api/cluster', 
     dataType:'JSON', 
     success: function(data) {
         for(i=0;i<data.length;i++){
             var dataAll = data[i];
             var tahun = dataAll.tahun;
-            if( kec == "Rendah"){
+            var cluster = dataAll.cluster;
+            if( tahun == 0){
                 switch(cluster){
                     case 1:
                         rendah2016++;
@@ -60,24 +61,51 @@ $.ajax({
                     default:
                         console.log("gagal");
                 }
-                rendah2016++;
-            }else if(kec == "Sedang"){
-                sedang2016++;
-            }else if(kec == "Tinggi"){
-                tinggi2016++
+            }else if( tahun == 1){
+                switch(cluster){
+                    case 1:
+                        rendah2017++;
+                        break;
+                    case 2:
+                        sedang2017++;
+                        break;
+                    case 3:
+                        tinggi2017++;
+                        break;
+                    default:
+                        console.log("gagal");
+                }
+            }else if( tahun == 2){
+                switch(cluster){
+                    case 1:
+                        rendah2018++;
+                        break;
+                    case 2:
+                        sedang2018++;
+                        break;
+                    case 3:
+                        tinggi2018++;
+                        break;
+                    default:
+                        console.log("gagal");
+                }
+            }else if( tahun == 3){
+                switch(cluster){
+                    case 1:
+                        rendah2019++;
+                        break;
+                    case 2:
+                        sedang2019++;
+                        break;
+                    case 3:
+                        tinggi2019++;
+                        break;
+                    default:
+                        console.log("gagal");
+                }
             }
         }
         
-        for(i=0;i<dataseries.length;i++){
-            if(dataseries[i].name == "Rendah"){
-                dataseries[i].data[0].push(rendah2016);
-            }else if(dataseries[i].name == "Sedang"){
-                dataseries[i].data[0].push(sedang2016);
-            }else if(dataseries[i].name == "Tinggi"){
-                dataseries[i].data[0].push(tinggi2016);
-            }
-        }
-
         Highcharts.chart('container', {
             chart: {
                 type: 'column',
@@ -117,7 +145,19 @@ $.ajax({
                     borderWidth: 0
                 }
             },
-            series: dataseries
+            series: [{
+                name: 'Rendah',
+                color: 'green',
+                data: [rendah2016,rendah2017,rendah2018,rendah2019]
+            }, {
+                name: 'Sedang',
+                color: 'yellow',
+                data: [sedang2016,sedang2017,sedang2018,sedang2019]
+            }, {
+                name: 'Tinggi',
+                color: 'red',
+                data: [tinggi2016,tinggi2017,tinggi2018,tinggi2019]
+            }]
         });
     }  
 });
