@@ -109,7 +109,7 @@ class RumahSakitController extends Controller
 
     public function dataRS()
     {
-        $data= RumahSakit::with('kecamatans')->get();
+        $data= RumahSakit::with('kecamatans')->orderBy('kecamatan_id')->get();
         $result = json_encode($data);
         echo $result;
     }
