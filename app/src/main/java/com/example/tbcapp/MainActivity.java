@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.example.tbcapp.adapter.RSAdapter;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //menghilangkan ActionBar
+//        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         rvAlamat = findViewById(R.id.rvAlamat);
@@ -40,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
         rsAdapter = new RSAdapter(this, alamatList);
         rsAdapter.notifyDataSetChanged();
         rvAlamat.setAdapter(rsAdapter);
-
         modelRS = alamatList;
     }
 
