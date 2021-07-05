@@ -2,4 +2,21 @@
     <string name="app_name">TBCApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="infotbc">Informasi Tuberkulosis</string>
+    <string name="pu_deskripsi">Membahas tentang apa itu TBC</string>
+    <string name="gj_deskripsi">Membahas tentang gejala yang dialami pasien</string>
+    <string name="info_pb">Pengobatan</string>
+    <string name="pb_deskripsi">Membahas tentang pengobatan TBC</string>
+    <string name="info_pc">Pencegahan</string>
+    <string name="pc_deskripsi">Membahas tentang pencegahan yang dapat dilakukan</string>
+    <string name="info_data">Data</string>
+    <string name="data_deskripsi">Menampilkan data - data seperti jumlah faskes, jumlah kasus TBC, rumah tidak sehat, kepadatan penduduk</string>
+    <string name="pengenalan">Informasi TBC</string>
+    <string name="pu">Pengenalan Umum</string>
+    <string name="penularan">Cara Penularan</string>
+    <string name="kelompok_rentan">Kelompok Rentan</string>
+    <string name="pencegahan">Pencegahan TBC</string>
+    <string name="gejala">Gejala TBC</string>
+    <string name="pengobatan">Pengobatan TBC</string>
+    <string name="data">Data Tiap Kecamatan</string>
 </resources>

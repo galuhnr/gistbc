@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
+    app:cardElevation="0dp"
     android:layout_marginBottom="10dp"
     android:padding="10dp">
 
@@ -22,11 +23,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/rs"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_centerVertical="true"/>
 
         <LinearLayout
-            android:layout_toRightOf="@+id/img_rs"
+            android:layout_toEndOf="@+id/img_rs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

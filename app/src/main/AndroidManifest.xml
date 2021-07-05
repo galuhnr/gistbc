@@ -15,12 +15,15 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".info.InfoActivity"></activity>
+        <activity android:name=".info.InfoPengenalan"></activity>
+        <activity android:name=".info.InfoGejala"></activity>
+        <activity android:name=".info.InfoPengobatan"></activity>
+        <activity android:name=".info.InfoPencegahan"></activity>
     </application>
 
 </manifest>

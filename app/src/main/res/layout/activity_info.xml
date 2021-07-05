@@ -6,221 +6,235 @@
     android:layout_height="match_parent"
     android:background="#ffeaa4"
     android:orientation="vertical"
-    tools:context=".InfoActivity">
+    tools:context=".info.InfoActivity">
 
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
 
-        <Button
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/arrow_left"/>
-
-        <ImageView
-            android:layout_width="240dp"
-            android:layout_height="178dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="60dp"
-            android:src="@drawable/ilustrasi_admin" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Informasi Tuberkulosis"
-            android:textSize="18sp"
-            android:textColor="#243C60"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+            android:background="@color/yellow"
+            app:navigationIcon="@drawable/ic_arrow">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:text="@string/infotbc"
+                android:textSize="18sp"
+                android:textColor="#243C60" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ilustrasi_admin" />
 
     <LinearLayout
         android:layout_width="440dp"
-        android:layout_height="548dp"
+        android:layout_height="630dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-60dp"
         android:background="@drawable/cvbg"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#B0E5F6"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="75dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:contextClickable="true"
+            android:onClick="infoPengenalan"
+            app:cardBackgroundColor="#B0E5F6"
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/icon_info1" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pengenalan Umum"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/pu"
                 android:textColor="#132743"
-                android:textSize="16sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Membahas tentang apa itu TBC"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/pu_deskripsi"
                 android:textColor="#132743"
-                android:textSize="10sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="35dp"/>
+                android:textSize="10sp" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#B0F5F1"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:contextClickable="true"
+            android:onClick="infoGejala"
+            app:cardBackgroundColor="#B0F5F1"
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/icon_info2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gejala TBC"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/gejala"
                 android:textColor="#132743"
-                android:textSize="16sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Membahas tentang gejala yang dialami pasien"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/gj_deskripsi"
                 android:textColor="#132743"
-                android:textSize="10sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="35dp"/>
+                android:textSize="10sp" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FBE8C0"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            android:contextClickable="true"
+            android:onClick="infoPengobatan"
+            app:cardBackgroundColor="#FBE8C0"
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/icon_info3" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pengobatan"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/info_pb"
                 android:textColor="#132743"
-                android:textSize="16sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Membahas tentang pengobatan TBC"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/pb_deskripsi"
                 android:textColor="#132743"
-                android:textSize="10sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="35dp"/>
+                android:textSize="10sp" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#F4B1BE"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            android:contextClickable="true"
+            android:onClick="infoPencegahan"
+            app:cardBackgroundColor="#F4B1BE"
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_margin="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/icon_info4" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pencegahan"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/info_pc"
                 android:textColor="#132743"
-                android:textSize="16sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Membahas tentang pencegahan yang dapat dilakukan"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="20dp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/pc_deskripsi"
                 android:textColor="#132743"
-                android:textSize="10sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="35dp"/>
+                android:textSize="10sp" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            app:cardBackgroundColor="#B0F5F1"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_height="90dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            app:cardBackgroundColor="#B0F5F1"
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="15dp"
                 android:src="@drawable/icon_info5" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/info_data"
                 android:textColor="#132743"
-                android:textSize="16sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Menampilkan data - data seperti jumlah faskes, jumlah kasus TBC, rumah tidak sehat, kepadatan penduduk tiap kecamatan"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="20dp"
+                android:lineSpacingExtra="2dp"
+                android:text="@string/data_deskripsi"
                 android:textColor="#132743"
-                android:textSize="10sp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="35dp"/>
+                android:textSize="10sp" />
 
         </androidx.cardview.widget.CardView>
 
-
     </LinearLayout>
+
 </LinearLayout>
