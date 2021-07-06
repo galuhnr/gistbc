@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,7 +17,7 @@
             android:id="@+id/hello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selamat Datang"
+            android:text="@string/welcome"
             android:textColor="#fff"
             android:textSize="20sp" />
 
@@ -28,7 +27,7 @@
             android:layout_below="@id/hello"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-black"
-            android:text="TB App"
+            android:text="@string/tbapp"
             android:textColor="#fff"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -36,7 +35,7 @@
         <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:background="@drawable/sby"/>
 
     </RelativeLayout>
@@ -53,27 +52,28 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="300dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:src="@drawable/bg_pemetaan" />
 
             <TextView
                 android:id="@+id/pemetaan"
                 android:layout_width="125dp"
                 android:layout_height="44dp"
-                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
                 android:layout_marginTop="30dp"
                 android:contextClickable="true"
-                android:text="Pemetaan Spasial Temporal"
+                android:text="@string/spasial"
                 android:textColor="#243C60"
                 android:textSize="16sp" />
 
             <TextView
+                android:onClick="infoMap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="80dp"
                 android:contextClickable="true"
-                android:text="Lihat Tingkat Kerawanan TBC"
+                android:text="@string/lihat_pemetaan"
                 android:textColor="#243C60"
                 android:textSize="10sp" />
 
@@ -95,7 +95,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:contextClickable="true"
-                android:text="Informasi Tuberkulosis"
+                android:text="@string/infotbc"
                 android:textColor="#243C60"
                 android:textSize="16sp" />
 
@@ -106,7 +106,7 @@
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="80dp"
                 android:contextClickable="true"
-                android:text="Lihat Selengkapnya"
+                android:text="@string/lihat_info"
                 android:textColor="#243C60"
                 android:textSize="10sp" />
 
@@ -122,7 +122,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat Rumah Sakit"
+            android:text="@string/alamat_rs"
             android:textColor="#243C60"
             android:textStyle="bold"
             android:textSize="20sp"/>

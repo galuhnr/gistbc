@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tbcapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +27,7 @@
         <activity android:name=".info.InfoGejala"></activity>
         <activity android:name=".info.InfoPengobatan"></activity>
         <activity android:name=".info.InfoPencegahan"></activity>
+        <activity android:name=".mapbox.MapActivity"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.tbcapp.adapter.RSAdapter;
 import com.example.tbcapp.info.InfoActivity;
+import com.example.tbcapp.mapbox.MapActivity;
 import com.example.tbcapp.model.ModelRS;
 import com.example.tbcapp.presenter.AlamatPresenter;
 import com.example.tbcapp.presenter.MainView;
@@ -52,6 +53,11 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     public void infoTBC(View view) {
         Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+        startActivity(intent);
+    }
+
+    public void infoMap(View view) {
+        Intent intent = new Intent(MainActivity.this, MapActivity.class);
         startActivity(intent);
     }
 }

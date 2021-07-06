@@ -24,7 +24,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/pengenalan"
-                    android:layout_marginStart="80dp"
+                    android:layout_marginStart="85dp"
                     android:textSize="18sp"
                     android:textColor="#243C60" />
 
@@ -32,188 +32,203 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.cardview.widget.CardView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="4dp" >
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_tbc"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/pu"
-            android:layout_marginTop="50dp"
-            android:layout_marginStart="230dp"
-            android:textColor="#C3AED6"
-            android:lineSpacingExtra="3dp"
-            android:textSize="18sp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/border_info1">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/isi_pengenalan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:textColor="@color/deep_navy"
-                android:lineSpacingExtra="2dp"/>
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_tbc"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pu"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="230dp"
+                    android:textColor="#C3AED6"
+                    android:lineSpacingExtra="3dp"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/white"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
+                android:background="@drawable/border_info1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:orientation="vertical">
 
-                    <com.github.florent37.expansionpanel.ExpansionHeader
+                    <TextView
+                        android:id="@+id/isi_pengenalan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="25dp"
+                        android:textColor="@color/deep_navy"
+                        android:lineSpacingExtra="5dp"/>
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:expansion_headerIndicator="@+id/headerIndicator"
-                        app:expansion_layout="@+id/expansionLayout"
-                        app:expansion_toggleOnClick="true">
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
 
-                        <ImageView
-                            android:id="@+id/headerIndicator"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:adjustViewBounds="true"
-                            app:tint="#8675A9"
-                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start|center_vertical"
-                            android:layout_marginStart="10dp"
-                            android:text="@string/penularan"
-                            android:textColor="#8675A9"
-                            android:textIsSelectable="true"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </com.github.florent37.expansionpanel.ExpansionHeader>
-
-                    <com.github.florent37.expansionpanel.ExpansionLayout
-                        android:id="@+id/expansionLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/isi_penularan"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/deep_navy"
                             android:layout_margin="10dp"
-                            android:lineSpacingExtra="2dp"
-                            android:textSize="12sp"/>
+                            android:orientation="vertical">
 
-                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                            <com.github.florent37.expansionpanel.ExpansionHeader
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:expansion_headerIndicator="@+id/headerIndicator"
+                                app:expansion_layout="@+id/expansionLayout"
+                                app:expansion_toggleOnClick="true">
+
+                                <ImageView
+                                    android:id="@+id/headerIndicator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:adjustViewBounds="true"
+                                    app:tint="#8675A9"
+                                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/penularan"
+                                    android:textColor="#8675A9"
+                                    android:textIsSelectable="true"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                            </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                            <com.github.florent37.expansionpanel.ExpansionLayout
+                                android:id="@+id/expansionLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/isi_penularan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/deep_navy"
+                                    android:layout_margin="10dp"
+                                    android:lineSpacingExtra="5dp"
+                                    android:textSize="12sp"/>
+
+                            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <com.github.florent37.expansionpanel.ExpansionHeader
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:expansion_headerIndicator="@+id/headerIndicator2"
+                                app:expansion_layout="@+id/expansionLayout2"
+                                app:expansion_toggleOnClick="true">
+
+                                <ImageView
+                                    android:id="@+id/headerIndicator2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:adjustViewBounds="true"
+                                    app:tint="#8675A9"
+                                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start|center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:text="@string/kelompok_rentan"
+                                    android:textColor="#8675A9"
+                                    android:textIsSelectable="true"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                            </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                            <com.github.florent37.expansionpanel.ExpansionLayout
+                                android:id="@+id/expansionLayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/isi_kelrentan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/deep_navy"
+                                    android:layout_margin="10dp"
+                                    android:lineSpacingExtra="5dp"
+                                    android:textSize="12sp"/>
+
+                            </com.github.florent37.expansionpanel.ExpansionLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="30dp"
-                android:backgroundTint="@color/white"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
-
-                    <com.github.florent37.expansionpanel.ExpansionHeader
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:expansion_headerIndicator="@+id/headerIndicator2"
-                        app:expansion_layout="@+id/expansionLayout2"
-                        app:expansion_toggleOnClick="true">
-
-                        <ImageView
-                            android:id="@+id/headerIndicator2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end|center_vertical"
-                            android:adjustViewBounds="true"
-                            app:tint="#8675A9"
-                            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start|center_vertical"
-                            android:layout_marginStart="10dp"
-                            android:text="@string/kelompok_rentan"
-                            android:textColor="#8675A9"
-                            android:textIsSelectable="true"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                    </com.github.florent37.expansionpanel.ExpansionHeader>
-
-                    <com.github.florent37.expansionpanel.ExpansionLayout
-                        android:id="@+id/expansionLayout2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/isi_kelrentan"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:textColor="@color/deep_navy"
-                            android:layout_margin="10dp"
-                            android:lineSpacingExtra="2dp"
-                            android:textSize="12sp"/>
-
-                    </com.github.florent37.expansionpanel.ExpansionLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+            </FrameLayout>
 
         </LinearLayout>
 
-    </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
