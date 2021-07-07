@@ -25,7 +25,7 @@
                         </div>
                         <div class="form-group">
                             <label class="txt-label">Isi Informasi</label>
-                            <input type="text" class="form-control" name="isi_info" id="isi_info" placeholder="Masukkan isi informasi" value="{{ $info->isi_info }}">
+                            <textarea type="text" class="form-control" name="isi_info" id="isi_info" placeholder="Masukkan isi informasi" value="">{{ $info->isi_info }}</textarea>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-center">

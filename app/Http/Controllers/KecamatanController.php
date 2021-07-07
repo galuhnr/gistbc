@@ -13,11 +13,16 @@ class KecamatanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $datakec = Kecamatan::all();
+        $pagination = 31;
+        $datakec = Kecamatan::when($request->keyword, function ($query) use ($request){
+            $query->where('nama_kecamatan','like',"%{$request->keyword}%");
+        })->orderBy('id_kecamatan','asc')->paginate($pagination);
+
+        $datakec->appends($request->only('keyword'));
+
         return view('kecamatan.tabel_kec', compact('datakec'));
-        
     }
 
     /**

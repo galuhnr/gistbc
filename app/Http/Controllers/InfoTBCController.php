@@ -14,9 +14,17 @@ class InfoTBCController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data= InfoTBC::all();
+        // $data= InfoTBC::all();
+        // return view('infotbc.index', compact('data'));
+        $pagination = 6;
+        $data = InfoTBC::when($request->keyword, function ($query) use ($request){
+            $query->where('nama_info','like',"%{$request->keyword}%");
+        })->orderBy('id_info','asc')->paginate($pagination);
+
+        $data->appends($request->only('keyword'));
+
         return view('infotbc.index', compact('data'));
     }
 
@@ -103,7 +111,7 @@ class InfoTBCController extends Controller
 
     public function dataInfo()
     {
-        $data= InfoTBC::all();
+        $data= InfoTBC::orderBy('id_info')->get();
         $result = json_encode($data);
         echo $result;
     }

@@ -51,7 +51,7 @@
         layers: [peta]
     });
 
-    var api = 'http://127.0.0.1:8000/api/cluster2017';
+    var api = 'http://192.168.43.133:8000/api/cluster2017';
     var dataCluster=[];
     var geojson=[];
     getData();

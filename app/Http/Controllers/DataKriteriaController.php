@@ -15,11 +15,21 @@ class DataKriteriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data= DataKriteria::with('tahuns', 'kecamatans')->get();
-        // return response()->json( [$data] );
+        // $data= DataKriteria::with('tahuns', 'kecamatans')->get();
+        // return view('datakriteria.index', compact('data'));
+
+        $pagination = 124;
+        $request->keyword;
+        $data = DataKriteria::whereHas('kecamatans',function ($query) use ($request){
+            $query->where('nama_kecamatan','like',"%{$request->keyword}%");
+        })->orderBy('kecamatan_id','asc')->paginate($pagination);
+
+        $data->appends($request->only('keyword'));
+
         return view('datakriteria.index', compact('data'));
+
     }
 
     /**

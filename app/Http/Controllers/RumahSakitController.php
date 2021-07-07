@@ -14,9 +14,16 @@ class RumahSakitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $data= RumahSakit::with('kecamatans')->get();
+        $pagination = 25;
+        $request->keyword;
+        $data = RumahSakit::whereHas('kecamatans',function ($query) use ($request){
+            $query->where('nama_kecamatan','like',"%{$request->keyword}%");
+        })->orderBy('kecamatan_id','asc')->paginate($pagination);
+
+        $data->appends($request->only('keyword'));
+
         return view('rumahsakit.index', compact('data'));
     }
 

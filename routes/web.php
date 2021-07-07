@@ -58,5 +58,9 @@ Route::group(['middleware'=>'auth'], function() {
     Route::get('grafik', 'App\Http\Controllers\HomeController@grafik')->name('grafik');
     Route::get('grafikDataKriteria', 'App\Http\Controllers\HomeController@grafik2')->name('grafikDataKriteria');
 
+    // profil
+    Route::get('profil', 'App\Http\Controllers\ProfilController@edit')->name('profil.edit');
+    Route::patch('profil', 'App\Http\Controllers\ProfilController@update')->name('profil.update');
+
 });
 

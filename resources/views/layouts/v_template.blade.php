@@ -52,8 +52,8 @@
                         Profil
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!-- <a class="dropdown-item" href="#">Edit Profil</a> -->
-                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="{{route('profil.edit')}}">Edit Profil</a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" style="color: #951F33;" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt mr-2"></i>Logout
                         </a>

@@ -40,7 +40,7 @@ var tinggi2019=0;
 
 // getData();
 $.ajax({  
-    url: 'http://127.0.0.1:8000/api/cluster', 
+    url: 'http://192.168.43.133:8000/api/cluster', 
     dataType:'JSON', 
     success: function(data) {
         for(i=0;i<data.length;i++){
