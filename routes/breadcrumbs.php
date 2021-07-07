@@ -119,16 +119,4 @@ Breadcrumbs::for('hasilcluster2019', function($trail){
     $trail->push('Hasil Klustering 2019',route('hasilcluster2019'));
 });
 
-// Profil
-Breadcrumbs::for('profil', function($trail){
-    $trail->parent('home');
-    $trail->push('Profil',route('profil.index'));
-});
-
-// Profil > Edit Data
-Breadcrumbs::for('profil.edit', function($trail,$kec){
-    $trail->parent('profil');
-    $trail->push($data->name,route('profil.index',$data->id_rs));
-});
-
 ?>
