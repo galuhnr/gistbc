@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     RecyclerView rvAlamat;
     RSAdapter rsAdapter;
-    List<ModelRS> modelRS;
     AlamatPresenter alamatPresenter;
 
     @Override
@@ -43,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
         rsAdapter = new RSAdapter(this, alamatList);
         rsAdapter.notifyDataSetChanged();
         rvAlamat.setAdapter(rsAdapter);
-        modelRS = alamatList;
     }
 
     @Override

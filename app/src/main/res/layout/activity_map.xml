@@ -33,7 +33,6 @@
         mapbox:mapbox_cameraTargetLat="-7.2574719"
         mapbox:mapbox_cameraTargetLng="	112.7520883"
         mapbox:mapbox_cameraZoom="10"
-        mapbox:mapbox_cameraZoomMin="10"
         />
 
 </LinearLayout>

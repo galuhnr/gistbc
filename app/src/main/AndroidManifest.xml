@@ -27,6 +27,7 @@
         <activity android:name=".info.InfoGejala"></activity>
         <activity android:name=".info.InfoPengobatan"></activity>
         <activity android:name=".info.InfoPencegahan"></activity>
+        <activity android:name=".info.InfoData"></activity>
         <activity android:name=".mapbox.MapActivity"></activity>
     </application>
 

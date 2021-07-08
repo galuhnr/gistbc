@@ -201,6 +201,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:contextClickable="true"
+            android:onClick="infoData"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="30dp"

@@ -31,6 +31,15 @@
     <string name="pengobatan">Pengobatan TBC</string>
     <string name="data">Data Tiap Kecamatan</string>
 
+    <!-- string di layout dat-->
+    <string name="jml">*jml = Jumlah</string>
+    <string name="ts">*TS = Tidak Sehat</string>
+    <string name="kep">*KP = Kepadatan Penduduk</string>
+    <string name="kc">Kecamatan</string>
+    <string name="faskes">Jml Faskes</string>
+    <string name="rumahts">Rumah TS</string>
+    <string name="kp">KP</string>
+
     <!-- string pilihan menu di app bar untuk pemetaan-->
     <string name="pilih_thn">Pilih Tahun</string>
     <string name="thn_2016">2016</string>

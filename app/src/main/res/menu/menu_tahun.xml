@@ -4,12 +4,12 @@
     <item android:id="@+id/menu_thn"
         android:title="@string/pilih_thn"
         app:showAsAction="ifRoom"/>
-    <item android:id="@+id/map_2016"
-        android:title="@string/thn_2016" />
-    <item android:id="@+id/map_2017"
+    <item android:id="@+id/thn_2016"
+        android:title="@string/thn_2016"/>
+    <item android:id="@+id/thn_2017"
         android:title="@string/thn_2017" />
-    <item android:id="@+id/map_2018"
+    <item android:id="@+id/thn_2018"
         android:title="@string/thn_2018" />
-    <item android:id="@+id/map_2019"
+    <item android:id="@+id/thn_2019"
         android:title="@string/thn_2019" />
 </menu>

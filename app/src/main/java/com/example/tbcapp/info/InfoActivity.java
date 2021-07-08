@@ -46,4 +46,9 @@ public class InfoActivity extends AppCompatActivity {
         Intent intent = new Intent(InfoActivity.this , InfoPencegahan.class);
         startActivity(intent);
     }
+
+    public void infoData(View view) {
+        Intent intent = new Intent(InfoActivity.this , InfoData.class);
+        startActivity(intent);
+    }
 }

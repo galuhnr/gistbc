@@ -120,16 +120,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 MapActivity activity = weakReference.get();
                 if (activity != null) {
                     try {
-                        if(item==R.id.map_2016){
+                        if(item==R.id.thn_2016){
                             URL api2016 = new URL("http://192.168.43.133:8000/api/cluster2016");
                             url = api2016;
-                        }else if(item==R.id.map_2017){
+                        }else if(item==R.id.thn_2017){
                             URL api2017 = new URL("http://192.168.43.133:8000/api/cluster2017");
                             url = api2017;
-                        }else if(item==R.id.map_2018){
+                        }else if(item==R.id.thn_2018){
                             URL api2018 = new URL("http://192.168.43.133:8000/api/cluster2018");
                             url = api2018;
-                        }else if(item==R.id.map_2019){
+                        }else if(item==R.id.thn_2019){
                             URL api2019 = new URL("http://192.168.43.133:8000/api/cluster2019");
                             url = api2019;
                         }else{
@@ -204,7 +204,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.map_2016:
+            case R.id.thn_2016:
                 mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
@@ -212,14 +212,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             GeoJsonSource sbyRouteGeoJson = new GeoJsonSource(
                                     "sbydata", new URI("asset://sby.geojson"));
                             style.addSource(sbyRouteGeoJson);
-                            new LoadJson(MapActivity.this,R.id.map_2016).execute();
+                            new LoadJson(MapActivity.this,R.id.thn_2016).execute();
                         } catch (URISyntaxException exception) {
                             Log.e(TAG,"geojson tidak tampil"+exception);
                         }
                     }
                 });
                 return true;
-            case R.id.map_2017:
+            case R.id.thn_2017:
                 mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
@@ -227,14 +227,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             GeoJsonSource sbyRouteGeoJson = new GeoJsonSource(
                                     "sbydata", new URI("asset://sby.geojson"));
                             style.addSource(sbyRouteGeoJson);
-                            new LoadJson(MapActivity.this,R.id.map_2017).execute();
+                            new LoadJson(MapActivity.this,R.id.thn_2017).execute();
                         } catch (URISyntaxException exception) {
                             Log.e(TAG,"geojson tidak tampil"+exception);
                         }
                     }
                 });
                 return true;
-            case R.id.map_2018:
+            case R.id.thn_2018:
                 mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
@@ -242,14 +242,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             GeoJsonSource sbyRouteGeoJson = new GeoJsonSource(
                                     "sbydata", new URI("asset://sby.geojson"));
                             style.addSource(sbyRouteGeoJson);
-                            new LoadJson(MapActivity.this,R.id.map_2018).execute();
+                            new LoadJson(MapActivity.this,R.id.thn_2018).execute();
                         } catch (URISyntaxException exception) {
                             Log.e(TAG,"geojson tidak tampil"+exception);
                         }
                     }
                 });
                 return true;
-            case R.id.map_2019:
+            case R.id.thn_2019:
                 mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
@@ -257,7 +257,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                             GeoJsonSource sbyRouteGeoJson = new GeoJsonSource(
                                     "sbydata", new URI("asset://sby.geojson"));
                             style.addSource(sbyRouteGeoJson);
-                            new LoadJson(MapActivity.this,R.id.map_2019).execute();
+                            new LoadJson(MapActivity.this,R.id.thn_2019).execute();
                         } catch (URISyntaxException exception) {
                             Log.e(TAG,"geojson tidak tampil"+exception);
                         }
