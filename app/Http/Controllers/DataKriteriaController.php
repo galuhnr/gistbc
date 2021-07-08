@@ -121,4 +121,33 @@ class DataKriteriaController extends Controller
         $dt->delete();
         return back()->with('info', 'Data berhasil dihapus');
     }
+
+    //api
+    public function dataInfo1()
+    {
+        $data = DataKriteria::with('tahuns','kecamatans')->where('tahun_id','0')->orderBy('kecamatan_id')->get();
+        $result = json_encode($data);
+        echo $result;
+    }
+
+    public function dataInfo2()
+    {
+        $data= DataKriteria::with('tahuns','kecamatans')->where('tahun_id','1')->orderBy('kecamatan_id')->get();
+        $result = json_encode($data);
+        echo $result;
+    }
+
+    public function dataInfo3()
+    {
+        $data= DataKriteria::with('tahuns','kecamatans')->where('tahun_id','2')->orderBy('kecamatan_id')->get();
+        $result = json_encode($data);
+        echo $result;
+    }
+
+    public function dataInfo4()
+    {
+        $data= DataKriteria::with('tahuns','kecamatans')->where('tahun_id','3')->orderBy('kecamatan_id')->get();
+        $result = json_encode($data);
+        echo $result;
+    }
 }
