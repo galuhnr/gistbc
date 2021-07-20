@@ -15,7 +15,8 @@ class PythonController extends Controller
     {
         $result = shell_exec("python " . base_path(). "\python\data2016.py 2>&1");
         $data = json_decode($result);
-        return view('hasilcluster.index2016',['collections'=>$data]);
+        return view('hasilcluster.index2016',compact('data'));
+        // return view('hasilcluster.index2016',['collections'=>$data]);
     }
 
     public function hasil2()

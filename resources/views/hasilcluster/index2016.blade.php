@@ -20,16 +20,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($collections as $data)
+                    @foreach ($data as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $data->nama_kecamatan }}</td>
-                            <td>{{ $data->jml_faskes }}</td>
-                            <td>{{ $data->jml_kasus }}</td>
-                            <td>{{ $data->jml_rumahts }}</td>
-                            <td>{{ $data->jml_kp }}</td>
-                            <td>{{ $data->cluster }}</td>
-                            <td>{{ $data->kategori }}</td>
+                            <td>{{ $item->nama_kecamatan }}</td>
+                            <td>{{ $item->jml_faskes }}</td>
+                            <td>{{ $item->jml_kasus }}</td>
+                            <td>{{ $item->jml_rumahts }}</td>
+                            <td>{{ $item->jml_kp }}</td>
+                            <td>{{ $item->cluster }}</td>
+                            <td>{{ $item->kategori }}</td>
                         </tr>
                     @endforeach
                     </tbody>

@@ -20,11 +20,11 @@ class DataKriteriaController extends Controller
         // $data= DataKriteria::with('tahuns', 'kecamatans')->get();
         // return view('datakriteria.index', compact('data'));
 
-        $pagination = 124;
+        $pagination = 500;
         $request->keyword;
         $data = DataKriteria::whereHas('kecamatans',function ($query) use ($request){
             $query->where('nama_kecamatan','like',"%{$request->keyword}%");
-        })->orderBy('kecamatan_id','asc')->paginate($pagination);
+        })->orderBy('id_data','asc')->paginate($pagination);
 
         $data->appends($request->only('keyword'));
 
@@ -66,7 +66,7 @@ class DataKriteriaController extends Controller
             return response(['error' => $validator->errors(), 'Validation Error']);
         }
         $dk = DataKriteria::create($datas);
-        return redirect('datakriterias')->with('toast_success', 'Data berhasil disimpan!');
+        return redirect('datakriteria')->with('toast_success', 'Data berhasil disimpan!');
     }
 
     /**
