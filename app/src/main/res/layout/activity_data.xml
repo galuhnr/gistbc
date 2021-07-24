@@ -87,7 +87,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="61dp"
+                    android:layout_width="64dp"
                     android:layout_column="1"
                     android:gravity="center"
                     android:lineSpacingExtra="3dp"

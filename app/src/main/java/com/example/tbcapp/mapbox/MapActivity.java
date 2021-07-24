@@ -121,16 +121,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 if (activity != null) {
                     try {
                         if(item==R.id.thn_2016){
-                            URL api2016 = new URL("http://192.168.43.133:8000/api/cluster2016");
+                            URL api2016 = new URL("http://10.0.2.2:8000/api/cluster2016");
                             url = api2016;
                         }else if(item==R.id.thn_2017){
-                            URL api2017 = new URL("http://192.168.43.133:8000/api/cluster2017");
+                            URL api2017 = new URL("http://10.0.2.2:8000/api/cluster2017");
                             url = api2017;
                         }else if(item==R.id.thn_2018){
-                            URL api2018 = new URL("http://192.168.43.133:8000/api/cluster2018");
+                            URL api2018 = new URL("http://10.0.2.2:8000/api/cluster2018");
                             url = api2018;
                         }else if(item==R.id.thn_2019){
-                            URL api2019 = new URL("http://192.168.43.133:8000/api/cluster2019");
+                            URL api2019 = new URL("http://10.0.2.2:8000/api/cluster2019");
                             url = api2019;
                         }else{
                             Log.e(TAG,"proses api gagal");

@@ -70,7 +70,7 @@
                 android:onClick="infoMap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
                 android:layout_marginTop="80dp"
                 android:contextClickable="true"
                 android:text="@string/lihat_pemetaan"
@@ -92,7 +92,7 @@
                 android:id="@+id/info"
                 android:layout_width="125dp"
                 android:layout_height="44dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:contextClickable="true"
                 android:text="@string/infotbc"
@@ -103,7 +103,7 @@
                 android:onClick="infoTBC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginStart="35dp"
                 android:layout_marginTop="80dp"
                 android:contextClickable="true"
                 android:text="@string/lihat_info"
@@ -115,9 +115,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,6 +128,12 @@
             android:textColor="#243C60"
             android:textStyle="bold"
             android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/spinnerKecamatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp" />
 
     </LinearLayout>
 
